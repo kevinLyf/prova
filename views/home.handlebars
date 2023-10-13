@@ -1,0 +1,28 @@
+<main class="body">
+  {{#each result}}
+    <div class="card">
+      <div class="card-header">
+        <h2 class="card-title">{{this.title}}</h2>
+        <div class="card-category">
+          <span>{{this.category}}</span>
+        </div>
+      </div>
+      <span class="card-price">R$ {{this.price}}</span>
+      <p class="card-description">{{this.description}}</p>
+      <a href="/products/{{this.id}}" class="button view">
+      View
+      </a>
+      <div class="card-footer">
+        <a href="/products/edit/{{this.id}}" class="button edit">
+          Edit
+        </a>
+        <a href="/products/delete/{{this.id}}" class="button delete">
+          Delete
+        </a>
+      </div>
+    </div>
+  {{/each}}
+</main>
+
+<script>
+</script>
